@@ -3138,6 +3138,28 @@ td.breakable {
   margin-top: 25px;
 }
 
+.datagrid .sorting,
+.datagrid .filtering {
+  display: inline;
+}
+
+.datagrid .datagrid-body {
+  background-color: #fff;
+}
+
+.datagrid .datagrid-body th {
+  font-weight: 400;
+  color: #333;
+}
+
+.datagrid .filters {
+  padding: 25px;
+}
+
+.datagrid .filters .form-group {
+  min-height: 36px;
+}
+
 @media (max-width: 787px) {
   .nav-stacked > li {
     display: block;

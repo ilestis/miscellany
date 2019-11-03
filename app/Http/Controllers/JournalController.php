@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Datagrids\JournalDatagrid;
 use App\Models\Character;
 use App\Models\Journal;
 use App\Http\Requests\StoreJournal;
@@ -22,6 +23,8 @@ class JournalController extends CrudController
      * @var string
      */
     protected $model = \App\Models\Journal::class;
+
+    protected $datagrid = JournalDatagrid::class;
 
     /**
      * JournalController constructor.

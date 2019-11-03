@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Datagrids\Datagrid;
 use App\Facades\CampaignLocalization;
 use App\Facades\FormCopy;
 use App\Http\Resources\Attribute;
+use App\Http\Resources\DatagridResource;
 use App\Models\AttributeTemplate;
 use App\Models\MiscModel;
 use App\Services\FilterService;
@@ -73,6 +75,11 @@ class CrudController extends Controller
     protected $tabBoosted = true;
 
     /**
+     * @var Datagrid
+     */
+    protected $datagrid;
+
+    /**
      * Create a new controller instance.
      *
      * @return void
@@ -108,7 +115,12 @@ class CrudController extends Controller
             $this->filters[] = 'is_private';
         }
 
+        /** @var MiscModel $model */
         $model = new $this->model;
+
+        /** @var Datagrid $datagrid */
+        $datagrid = new $this->datagrid;
+
         $this->filterService->make($this->view, request()->all(), $model);
         $name = $this->view;
         $actions = $this->indexActions;
@@ -135,6 +147,19 @@ class CrudController extends Controller
             $unfilteredCount = $filteredCount = $models->count();
         }
 
+        // Prepare the datagrid with info about filters and orders
+        $datagrid
+            ->searchFilters($this->filterService->filters())
+            ->orders($this->filterService->order());
+
+        if (request()->ajax()) {
+            return response()->json(
+                $datagrid
+                    ->rows($models)
+                    ->list()
+            );
+        }
+
         return view('cruds.index', compact(
             'models',
             'name',
@@ -145,7 +170,8 @@ class CrudController extends Controller
             'nestedView',
             'route',
             'filteredCount',
-            'unfilteredCount'
+            'unfilteredCount',
+            'datagrid'
         ));
     }
 

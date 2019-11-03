@@ -1,3 +1,8 @@
+<?php
+/**
+ * @var \App\Datagrids\Datagrid $datagrid
+ */
+?>
 @extends('layouts.app', [
     'title' => trans($name . '.index.title', ['name' => CampaignLocalization::getCampaign()->name]),
     'description' => '',
@@ -37,6 +42,16 @@
 
     @include('partials.errors')
 
+    <div id="datagrid">
+        <datagrid
+            bulk-url="{{ route('bulk.process') }}"
+            list-url="{{ route($name . '.index') }}"
+            :fields="{{ $datagrid->jsonFields() }}"
+            entity="{{ $name }}"
+            :filters="{{ $datagrid->jsonFilters() }}"
+        ></datagrid>
+    </div>
+
     <div class="box no-border">
         {!! Form::open(['url' => route('bulk.process'), 'method' => 'POST']) !!}
         <div class="box-body no-padding">
@@ -58,4 +73,9 @@
         </div>
         {!! Form::close() !!}
     </div>
+@endsection
+
+@section('scripts')
+    @parent
+    <script src="{{ mix('js/datagrid.js') }}" defer></script>
 @endsection

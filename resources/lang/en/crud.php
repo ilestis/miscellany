@@ -16,6 +16,7 @@ return [
         'next'              => 'Next',
         'private'           => 'Private',
         'public'            => 'Public',
+        'sort_by'           => 'Sort by',
     ],
     'add'               => 'Add',
     'attributes'        => [
@@ -165,6 +166,7 @@ return [
         'tag'                   => 'Tag',
         'tags'                  => 'Tags',
         'tooltip'               => 'Tooltip',
+        'type'                  => 'Type',
         'visibility'            => 'Visibility',
     ],
     'files'             => [

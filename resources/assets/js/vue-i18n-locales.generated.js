@@ -395,6 +395,44 @@ export default {
             }
         },
         "entities": [],
+        "journals": {
+            "create": {
+                "description": "Erstelle ein neues Logbuch",
+                "success": "Logbuch erstellt.",
+                "title": "Erstelle ein neues Logbuch"
+            },
+            "destroy": {
+                "success": "Logbuch entfernt."
+            },
+            "edit": {
+                "success": "Logbuch aktualisiert.",
+                "title": "Bearbeite Logbuch {name}"
+            },
+            "fields": {
+                "author": "Autor",
+                "date": "Datum",
+                "image": "Bild",
+                "name": "Name",
+                "relation": "Beziehung",
+                "type": "Typ"
+            },
+            "index": {
+                "add": "Neues Logbuch",
+                "description": "Verwalte die Logbücher von {name}",
+                "header": "Logbücher von {name}",
+                "title": "Logbücher"
+            },
+            "placeholders": {
+                "author": "Wer hat das Logbuch geschrieben",
+                "date": "Datum des Logbuchs",
+                "name": "Name des Logbuchs",
+                "type": "Session, One Shot, Entwurf"
+            },
+            "show": {
+                "description": "Eine detaillierte Ansicht eines Logbuchs",
+                "title": "Logbuch {name}"
+            }
+        },
         "randomisers": []
     },
     "en": {
@@ -481,7 +519,8 @@ export default {
                 "new": "New",
                 "next": "Next",
                 "private": "Private",
-                "public": "Public"
+                "public": "Public",
+                "sort_by": "Sort by"
             },
             "add": "Add",
             "attributes": {
@@ -631,6 +670,7 @@ export default {
                 "tag": "Tag",
                 "tags": "Tags",
                 "tooltip": "Tooltip",
+                "type": "Type",
                 "visibility": "Visibility"
             },
             "files": {
@@ -810,6 +850,44 @@ export default {
             }
         },
         "entities": [],
+        "journals": {
+            "create": {
+                "description": "Create a new journal",
+                "success": "Journal '{name}' created.",
+                "title": "New Journal"
+            },
+            "destroy": {
+                "success": "Journal '{name}' removed."
+            },
+            "edit": {
+                "success": "Journal '{name}' updated.",
+                "title": "Edit Journal {name}"
+            },
+            "fields": {
+                "author": "Author",
+                "date": "Date",
+                "image": "Image",
+                "name": "Name",
+                "relation": "Relation",
+                "type": "Type"
+            },
+            "index": {
+                "add": "New Journal",
+                "description": "Manage the journals of {name}.",
+                "header": "Journals of {name}",
+                "title": "Journals"
+            },
+            "placeholders": {
+                "author": "Who wrote the journal",
+                "date": "Date of the journal",
+                "name": "Name of the journal",
+                "type": "Session, One Shot, Draft"
+            },
+            "show": {
+                "description": "A detailed view of a journal",
+                "title": "Journal {name}"
+            }
+        },
         "randomisers": []
     },
     "en-US": {
@@ -1236,6 +1314,44 @@ export default {
             }
         },
         "entities": [],
+        "journals": {
+            "create": {
+                "description": "Crear nuevo diario",
+                "success": "Diario creado.",
+                "title": "Nuevo Diario"
+            },
+            "destroy": {
+                "success": "Diario borrado."
+            },
+            "edit": {
+                "success": "Diario actualizado.",
+                "title": "Editar diario {name}"
+            },
+            "fields": {
+                "author": "Autor",
+                "date": "Fecha",
+                "image": "Imagen",
+                "name": "Nombre",
+                "relation": "Relación",
+                "type": "Tipo"
+            },
+            "index": {
+                "add": "Nuevo Diario",
+                "description": "Gestiona los diarios de {name}",
+                "header": "Diarios de {name}",
+                "title": "Diarios"
+            },
+            "placeholders": {
+                "author": "Quién ha escrito el diario",
+                "date": "Fecha del diario",
+                "name": "Nombre del diario",
+                "type": "Sesión, Borrador..."
+            },
+            "show": {
+                "description": "Vista detallada del diario",
+                "title": "Diario {name}"
+            }
+        },
         "randomisers": []
     },
     "fr": {
@@ -1651,6 +1767,44 @@ export default {
             }
         },
         "entities": [],
+        "journals": {
+            "create": {
+                "description": "Créer un nouveau journal",
+                "success": "Journal créé.",
+                "title": "Nouveau Journal"
+            },
+            "destroy": {
+                "success": "Journal supprimé."
+            },
+            "edit": {
+                "success": "Journal modifié.",
+                "title": "Modifier Journal {name}"
+            },
+            "fields": {
+                "author": "Auteur",
+                "date": "Date",
+                "image": "Image",
+                "name": "Nom",
+                "relation": "Relation",
+                "type": "Type"
+            },
+            "index": {
+                "add": "Nouveau Journal",
+                "description": "Gérer les journaux de {name}.",
+                "header": "Journaux de {name}",
+                "title": "Journaux"
+            },
+            "placeholders": {
+                "author": "Qui a écrit le journal",
+                "date": "Date du journal",
+                "name": "Nom du journal",
+                "type": "Session, One Shot, Brouillon"
+            },
+            "show": {
+                "description": "Détail d'un journal",
+                "title": "Journal {name}"
+            }
+        },
         "randomisers": []
     },
     "hu": {
@@ -2005,6 +2159,44 @@ export default {
             "view": "Megtekintés"
         },
         "entities": [],
+        "journals": {
+            "create": {
+                "description": "Új naplóbejegyzés létrehozása",
+                "success": "'{name}' naplóbejegyzést létrehoztuk.",
+                "title": "Új naplóbejegyzést"
+            },
+            "destroy": {
+                "success": "'{name}' naplóbejegyzést eltávolítottuk."
+            },
+            "edit": {
+                "success": "'{name}' naplóbejegyzést frissítettük.",
+                "title": "{name} naplóbejegyzés szerkesztése"
+            },
+            "fields": {
+                "author": "Szerző",
+                "date": "Dátum",
+                "image": "Kép",
+                "name": "Megnevezés",
+                "relation": "Kapcsolat",
+                "type": "Típus"
+            },
+            "index": {
+                "add": "Új naplóbejegyzés",
+                "description": "{name} naplóbejegyzéseinek kezelése",
+                "header": "{name} naplóbejegyzései",
+                "title": "Naplók"
+            },
+            "placeholders": {
+                "author": "Ki írta a naplóbejegyzést?",
+                "date": "A naplóbejegyzés keletkezésének dátuma",
+                "name": "A naplóbejegyzés címe",
+                "type": "Játékalkalom, egylövetű, vázlat"
+            },
+            "show": {
+                "description": "A naplóbejegyzés részletes nézete",
+                "title": "{name}"
+            }
+        },
         "randomisers": []
     },
     "it": {
@@ -2401,6 +2593,44 @@ export default {
             }
         },
         "entities": [],
+        "journals": {
+            "create": {
+                "description": "Crea un nuovo diario",
+                "success": "Diario '{name}' creato.",
+                "title": "Nuovo Diario"
+            },
+            "destroy": {
+                "success": "Diario '{name}' rimosso."
+            },
+            "edit": {
+                "success": "Diario '{name}' aggiornato.",
+                "title": "Modifica del diario {name}"
+            },
+            "fields": {
+                "author": "Autore",
+                "date": "Data",
+                "image": "Immagine",
+                "name": "Nome",
+                "relation": "Relazione",
+                "type": "Tipo"
+            },
+            "index": {
+                "add": "Nuovo Diario",
+                "description": "Gestisci i diari di {name}.",
+                "header": "Diari di {name}",
+                "title": "Diari"
+            },
+            "placeholders": {
+                "author": "Chi ha scritto il diario",
+                "date": "Data del diario",
+                "name": "Nome del diario",
+                "type": "Sessione, One Shot, Bozza"
+            },
+            "show": {
+                "description": "Una vista dettagliata di un diario",
+                "title": "Diario {name}"
+            }
+        },
         "randomisers": []
     },
     "nl": {
@@ -2575,6 +2805,44 @@ export default {
             "view": "Ver"
         },
         "entities": [],
+        "journals": {
+            "create": {
+                "description": "Criar um novo jornal",
+                "success": "Jornal criado.",
+                "title": "Criar novo jornal"
+            },
+            "destroy": {
+                "success": "Jornal removido"
+            },
+            "edit": {
+                "success": "Jornal atualizado",
+                "title": "Editar Jornal {name}"
+            },
+            "fields": {
+                "author": "Autor",
+                "date": "Data",
+                "image": "Imagem",
+                "name": "Nome",
+                "relation": "Relação",
+                "type": "Tipo"
+            },
+            "index": {
+                "add": "Novo Jornal",
+                "description": "Gerencie os jornais de {name}.",
+                "header": "Jornais de {name}",
+                "title": "Jornais"
+            },
+            "placeholders": {
+                "author": "Quem escreveu o jornal",
+                "date": "Data do jornal",
+                "name": "Nome do jornal",
+                "type": "Sessão, One Shot, Rascunho"
+            },
+            "show": {
+                "description": "Uma visão detalhada de um jornal",
+                "title": "Jornal {name}"
+            }
+        },
         "randomisers": []
     },
     "ru": {

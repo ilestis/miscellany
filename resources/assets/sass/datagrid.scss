@@ -1,0 +1,21 @@
+.datagrid {
+  .sorting, .filtering {
+    display: inline;
+  }
+
+  .datagrid-body {
+    background-color: #fff;
+
+    th {
+      font-weight: 400;
+      color: #333;
+    }
+  }
+  .filters {
+    padding: 25px;
+
+    .form-group {
+      min-height: 36px;
+    }
+  }
+}
