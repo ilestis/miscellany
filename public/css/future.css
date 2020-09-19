@@ -109,6 +109,20 @@
   background-color: #0B1F20 !important;
 }
 
+.table-hover tbody tr.active th,
+.table-hover tbody tr.active td {
+  background-color: #0B1F20;
+}
+
+.table-hover tbody tr.active:hover th,
+.table-hover tbody tr.active:hover td {
+  background-color: #42FFFF;
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: #0C1416;
+}
+
 h1,
 h2,
 h3,
@@ -131,11 +145,6 @@ select {
 .form-control,
 label {
   color: #eee;
-}
-
-.preview {
-  background-color: #0B1F20;
-  min-height: 40px;
 }
 
 .select2 .select2-selection {
@@ -568,12 +577,17 @@ body {
 .btn:hover {
   color: #0B1F20 !important;
   background-color: #42FFFF !important;
-  border: none !important;
+  border: 1px solid #42FFFF !important;
 }
 
 .btn-danger:hover {
   background-color: #992329 !important;
   color: white !important;
+}
+
+.btn-box-tool {
+  background-color: transparent !important;
+  border: 1px solid transparent !important;
 }
 
 .input-group-btn .new-entity-selector {
@@ -694,5 +708,9 @@ a:hover {
 
 input[type=checkbox]:checked ~ label:before {
   content: "\2605";
+}
+
+#campaign-dashboard .box .box-tools {
+  right: 0;
 }
 

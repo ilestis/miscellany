@@ -134,11 +134,14 @@ hr {
 }
 
 
-.panel-body {
-  .preview {
-    background: none;
-    &:before {
-      background: linear-gradient(transparent 0px, $Soft) !important;;
+.widget {
+  .panel-body {
+    .preview {
+      background: none;
+
+      &:before {
+        background: linear-gradient(transparent 0px, $Detail) !important;;
+      }
     }
   }
 }

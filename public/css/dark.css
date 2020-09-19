@@ -107,6 +107,20 @@
   background-color: #222 !important;
 }
 
+.table-hover tbody tr.active th,
+.table-hover tbody tr.active td {
+  background-color: #222;
+}
+
+.table-hover tbody tr.active:hover th,
+.table-hover tbody tr.active:hover td {
+  background-color: #424240;
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: #333;
+}
+
 h1,
 h2,
 h3,
@@ -129,11 +143,6 @@ select {
 .form-control,
 label {
   color: #eee;
-}
-
-.preview {
-  background-color: #222;
-  min-height: 40px;
 }
 
 .select2 .select2-selection {
@@ -680,12 +689,12 @@ hr {
   background-color: #515142;
 }
 
-.panel-body .preview {
+.widget .panel-body .preview {
   background: none;
 }
 
-.panel-body .preview:before {
-  background: linear-gradient(transparent 0px, #333) !important;
+.widget .panel-body .preview:before {
+  background: linear-gradient(transparent 0px, #222) !important;
 }
 
 .bg-aqua,

@@ -107,6 +107,20 @@
   background-color: #0a121b !important;
 }
 
+.table-hover tbody tr.active th,
+.table-hover tbody tr.active td {
+  background-color: #0a121b;
+}
+
+.table-hover tbody tr.active:hover th,
+.table-hover tbody tr.active:hover td {
+  background-color: #fff;
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: #333;
+}
+
 h1,
 h2,
 h3,
@@ -129,11 +143,6 @@ select {
 .form-control,
 label {
   color: #eee;
-}
-
-.preview {
-  background-color: #0a121b;
-  min-height: 40px;
 }
 
 .select2 .select2-selection {
