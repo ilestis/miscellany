@@ -54,6 +54,7 @@ $campaign = CampaignLocalization::getCampaign(); ?>
 {{-- Hide the sidebar if the there is no current campaign --}}
 <body class="skin-black sidebar-mini @if (!empty($campaign) || (auth()->check() && auth()->user()->hasCampaigns()) || (!empty($sidebar) && $sidebar == 'settings')) @else layout-top-nav @endif @if(isset($miscModel) && !empty($miscModel->entity)) kanka-entity-{{ $miscModel->entity->id }} kanka-entity-{{ $miscModel->getEntityType() }} @if(!empty($miscModel->type)) kanka-type-{{ \Illuminate\Support\Str::slug($miscModel->type) }}@endif @endif">
 @include('layouts._tracking-fallback')
+
     <div id="app" class="wrapper">
         <!-- Header -->
         @include('layouts.header')
@@ -63,9 +64,8 @@ $campaign = CampaignLocalization::getCampaign(); ?>
 
         @yield('fullpage-form')
 
-        <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper" @if(isset($contentId)) id="{{ $contentId }}" @endif>
-            <!-- Content Header (Page header) -->
+            @if(!isset($skipContentHeader) || $skipContentHeader === false)
             <section class="content-header">
                 @if (!isset($breadcrumbs) || $breadcrumbs !== false)
                 <ol class="breadcrumb">
@@ -110,6 +110,9 @@ $campaign = CampaignLocalization::getCampaign(); ?>
                     @endif
                 @endif
             </section>
+            @endif
+
+            @yield('pre-content')
 
             <!-- Main content -->
             <section class="content">
