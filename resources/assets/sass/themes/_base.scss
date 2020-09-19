@@ -102,7 +102,21 @@
         background-color: $Detail !important;
       }
     }
+    tr.active {
+      th, td {
+        background-color: $Detail;
+      }
+      &:hover {
+        th, td {
+          background-color: $Hard;
+        }
+      }
+    }
   }
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: $Soft;
 }
 
 h1, h2, h3, h4, h5, h6, h1 > small {
@@ -118,10 +132,7 @@ input, textarea, .select2, select  {
 .form-control, label {
   color: $White;
 }
-.preview {
-  background-color: $Detail;
-  min-height: 40px;
-}
+
 
 .select2 {
   .select2-selection {

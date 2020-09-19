@@ -24,7 +24,7 @@ body {
   &:hover {
     color: $Detail !important;
     background-color: $Hard !important;
-    border: none !important;
+    border: 1px solid $Hard !important;
   }
 }
 .btn-danger {
@@ -32,6 +32,10 @@ body {
     background-color: #992329 !important;
     color: white !important;
   }
+}
+.btn-box-tool {
+  background-color: transparent !important;
+  border: 1px solid transparent !important;
 }
 .input-group-btn {
   .new-entity-selector {
@@ -153,4 +157,10 @@ a {
 
 input[type="checkbox"]:checked ~ label:before {
   content: "\2605";
+}
+
+#campaign-dashboard {
+  .box .box-tools {
+    right: 0;
+  }
 }

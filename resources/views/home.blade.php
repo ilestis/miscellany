@@ -18,33 +18,9 @@
     <meta property="og:url" content="{{ route('campaigns.show', $campaign)  }}" />
 @endsection
 
-@section('header-extra')
-    <div class="dashboard-actions">
-        @if($settings)
-            <a href="{{ route('dashboard.setup') }}" class="btn btn-default btn-xl" title="{{ __('dashboard.settings.title') }}">
-                <i class="fa fa-cog"></i>
-            </a>
-        @endif
-        @can ('follow', $campaign)
-            <button id="campaign-follow" class="btn btn-default btn-xl" data-id="{{ $campaign->id }}"
-                    style="display: none"
-                    data-following="{{ $campaign->isFollowing() ? true : false }}"
-                    data-follow="{{ __('dashboard.actions.follow') }}"
-                    data-unfollow="{{ __('dashboard.actions.unfollow') }}"
-                    data-url="{{ route('campaign.follow') }}"
-                    data-toggle="tooltip" title="{{ __('dashboard.helpers.follow') }}"
-                    data-placement="bottom"
-            >
-                <i class="fa fa-star"></i> <span id="campaign-follow-text"></span>
-            </button>
-        @endcan
-    </div>
-@endsection
-
 @section('pre-content')
     @include('dashboard._campaign-header')
 @endsection
-
 
 @section('content')
 

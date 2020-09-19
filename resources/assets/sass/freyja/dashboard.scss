@@ -7,38 +7,53 @@
   background-size: cover;
 
   .campaign-header-content {
-    display: flex;
-    flex-flow: row nowrap;
+    //display: flex;
+    //flex-flow: row nowrap;
   }
 
   .campaign-content {
-    display: flex;
-    align-content: stretch;
-    flex: 1;
-    flex-direction: column;
+    //display: flex;
+    //align-content: stretch;
+    //flex: 1;
+    //flex-direction: column;
 
+    .campaign-head {
+      display: flex;
+      justify-content: space-between;
 
-    .campaign-title {
-      font-size: 32px;
-      line-height: 42px;
-      margin: 0;
-      padding: 0;
-      flex: 1;
+      a.campaign-link {
+        flex: 1;
+        margin-right: 30px;
+      }
+
+      .campaign-title {
+        font-size: 24px;
+        line-height: 32px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .action-bar {
+        .btn {
+          font-style: normal;
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
     }
-
-
   }
   .action-bar {
-     align-self: flex-end;
+
+     //align-self: flex-end;
 
      /* Action button shadow */
 
-     filter: drop-shadow(0px 1px 2px rgba(51, 51, 51, 0.22));
+     //filter: drop-shadow(0px 1px 2px rgba(51, 51, 51, 0.22));
 
-    .dropdown-menu {
-      right: 0;
-      left: unset;
-    }
+    //.dropdown-menu {
+    //  right: 0;
+    //  left: unset;
+    //}
    }
 }
 
@@ -57,6 +72,16 @@
 /** mobile **/
 @media (max-width: 767px) {
   .campaign-header {
+    .campaign-content > .campaign-head {
+      flex-direction: column;
+      a.campaign-link {
+        margin-right: 0;
+      }
+      .action-bar {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
   }
   .campaign-header.campaign-imaged-header {
     padding: 20px 10px;

@@ -14,7 +14,7 @@ return [
     ],
     'description'       => 'The home for your creativity',
     'helpers'           => [
-        'customise' => 'You can change the text and image displayed here! Go to edit your campaign and either fill out out the "Description" field on the "Entry" tab, or the "Excerpt" field on "Dashboard" tab. On the "Dashboard" tab, you can select an image to display as a header.',
+        'customise' => 'You can change the text and image displayed here! Go to edit your campaign and click on the "Dashboard" tab.',
         'follow'    => 'Following a campaign will make it appear in the campaign switcher (top-left) below your campaigns.',
         'setup'     => 'Setup your campaign\'s dashboard.',
     ],
